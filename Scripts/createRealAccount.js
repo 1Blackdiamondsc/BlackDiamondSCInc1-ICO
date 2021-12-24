@@ -5,8 +5,8 @@ module.exports = function(callback) {
   const account = web3.personal.newAccount('123456789')
   console.log(`Created AVAX wallet to deploy contracts: ${account} (password is '123456789', don't loose it) — you will be able to access it later`)
   // Get gas limit
-  const gasLimit = web3.eth.getBlock('latest').gasLimit
-  const gasPrice = web3.eth.gasPrice
+  const gasLimit = web3.avax.getBlock('latest').gasLimit
+  const gasPrice = web3.avax.gasPrice
   console.log(`Please, send at least ${web3.fromWei(gasPrice * gasLimit * 3, 'avax')}AVAX to ${account} so that the contracts can be deployed`)
   let funded = false
   while(!funded) {
