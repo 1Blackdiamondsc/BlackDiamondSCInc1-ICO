@@ -2,7 +2,7 @@
 
 # Get options
 testrpc=true
-staging=false
+staging=true
 release=false
 dry=false
 
